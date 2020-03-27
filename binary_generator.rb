@@ -6,9 +6,8 @@ n = gets.chomp.to_i
 
 def bin_gen(n)
   bin_str = Array.new(n) { 0 }
-  j = 0
 
-  while j >= 0
+  while true
     puts bin_str.inspect
 
     j = bin_str.length - 1
@@ -19,6 +18,8 @@ def bin_gen(n)
 
     bin_str[j] = 1
     bin_str.fill(0, j + 1, bin_str.length - j - 1)
+
+    break if j < 0
   end
 end
 
