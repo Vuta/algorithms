@@ -5,6 +5,11 @@ print "Input n: "
 n = gets.chomp.to_i
 
 def bin_gen(n)
+  if n.zero?
+    puts n
+    return
+  end
+
   bin_str = Array.new(n) { 0 }
 
   while true

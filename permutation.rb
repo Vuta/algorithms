@@ -5,6 +5,11 @@ print "Input n: "
 n = gets.chomp.to_i
 
 def generator(n)
+  if n.zero?
+    p [1]
+    return
+  end
+
   array = (1..n).to_a
 
   while true
